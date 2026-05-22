@@ -1,3 +1,4 @@
 <Solution>
+  <Folder Name="/Pages/" />
   <Project Path="Interfaces/Interfaces.csproj" />
 </Solution>

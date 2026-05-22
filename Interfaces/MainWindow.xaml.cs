@@ -1,13 +1,11 @@
-﻿using System.Text;
+﻿using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System.Windows.Media.Animation;
+
+
 
 namespace Interfaces
 {
@@ -16,9 +14,71 @@ namespace Interfaces
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        const string BACKGROUND_COLOR_NAVBUTTON = "Transparent";
+        const string BACKGROUND_HOVER_COLOR_NAVBUTTON = "#2563EB";
+
+        string SelectedPage = "Accueil";
+        object? currentNavButton;
+
         public MainWindow()
         {
             InitializeComponent();
+
+            currentNavButton = BtnAccueil;
+
+            FadeButtonColor(BtnAccueil, "In");
+        }
+        public void FadeButtonColor(Border border, string Mode)
+        {
+
+            if (border == null) return;
+
+            ColorAnimation fade = new ColorAnimation();
+
+            fade.From = (Color)ColorConverter.ConvertFromString(Mode == "In" ? BACKGROUND_COLOR_NAVBUTTON : BACKGROUND_HOVER_COLOR_NAVBUTTON);
+            fade.To = (Color)ColorConverter.ConvertFromString(Mode == "In" ? BACKGROUND_HOVER_COLOR_NAVBUTTON : BACKGROUND_COLOR_NAVBUTTON);
+            fade.Duration = TimeSpan.FromSeconds(0.15);
+
+            SolidColorBrush brush = new SolidColorBrush();
+            border.Background = brush;
+
+            brush.BeginAnimation(SolidColorBrush.ColorProperty, fade);
+        }
+
+        public void ChangeButtonColorOnMouseEnter(object sender, MouseEventArgs e)
+        {
+
+            Border border = (Border)sender;
+
+            if (SelectedPage == (string)border.Tag) return;
+
+            FadeButtonColor(border, "In");
+
+        }
+
+        public void ChangeButtonColorOnMouseLeave(object sender, MouseEventArgs e)
+        {
+            Border border = (Border)sender;
+
+            if (SelectedPage == (string)border.Tag) return;
+
+            FadeButtonColor(border, "Out");
+        }
+
+        public void NavButtonClick(object sender, RoutedEventArgs e)
+        {
+            Button button = (Button)sender;
+
+            string ButtonName = (string)button.Tag;
+
+            if (SelectedPage == ButtonName) return;
+
+            SelectedPage = ButtonName;
+
+            FadeButtonColor((Border)currentNavButton, "Out");
+
+            currentNavButton = VisualTreeHelper.GetParent(button);
         }
     }
 }
