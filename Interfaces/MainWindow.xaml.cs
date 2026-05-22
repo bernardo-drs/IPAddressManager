@@ -28,6 +28,28 @@ namespace Interfaces
             currentNavButton = BtnAccueil;
 
             FadeButtonColor(BtnAccueil, "In");
+
+            ChangePage();
+        }
+
+        public void ChangePage()
+        {
+            object page = null;
+
+            switch(SelectedPage)
+            {
+                case "Accueil":
+                    page = new Accueil();
+                    break;
+
+                default:
+                    break;
+            }
+
+            if (page == null) return;
+
+            MainFrame.Navigate(page);
+
         }
         public void FadeButtonColor(Border border, string Mode)
         {
@@ -79,6 +101,8 @@ namespace Interfaces
             FadeButtonColor((Border)currentNavButton, "Out");
 
             currentNavButton = VisualTreeHelper.GetParent(button);
+
+            ChangePage();
         }
     }
 }

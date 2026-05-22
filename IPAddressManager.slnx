@@ -1,4 +1,7 @@
 <Solution>
-  <Folder Name="/Pages/" />
+  <Folder Name="/Pages/">
+    <File Path="Interfaces/Accueil.xaml" />
+    <File Path="Interfaces/Accueil.xaml.cs" />
+  </Folder>
   <Project Path="Interfaces/Interfaces.csproj" />
 </Solution>

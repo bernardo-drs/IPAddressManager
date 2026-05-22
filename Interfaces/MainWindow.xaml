@@ -277,7 +277,7 @@
                 </Viewbox>
             </StackPanel>
         </Grid>
-        <Frame Grid.Column="1">
+        <Frame Grid.Column="1" x:Name="MainFrame" NavigationUIVisibility="Hidden">
             
         </Frame>
     </Grid>

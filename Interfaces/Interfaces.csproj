@@ -10,11 +10,13 @@
 
   <ItemGroup>
     <None Remove="Images\app_icon.png" />
+    <None Remove="Images\fast_icon.png" />
     <None Remove="Images\home_icon.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Images\app_icon.png" />
+    <Resource Include="Images\fast_icon.png" />
     <Resource Include="Images\home_icon.png" />
   </ItemGroup>
 
