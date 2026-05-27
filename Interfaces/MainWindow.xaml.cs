@@ -42,6 +42,10 @@ namespace Interfaces
                     page = new Accueil();
                     break;
 
+                case "Calculateur":
+                    page = new Calculateur();
+                    break;
+
                 default:
                     break;
             }

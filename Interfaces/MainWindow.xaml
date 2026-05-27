@@ -75,19 +75,19 @@
                     <!--Calculateur Button-->
 
                     <Border x:Name="BtnCalculateur" 
-     HorizontalAlignment="Stretch"
-     CornerRadius="5" 
-     Background="Transparent" 
-     Padding="0,5,0,5"
-     Margin="0,5,0,5"
-     Tag="Calculateur" 
-     MouseEnter="ChangeButtonColorOnMouseEnter" 
-     MouseLeave="ChangeButtonColorOnMouseLeave">
+                        HorizontalAlignment="Stretch"
+                        CornerRadius="5" 
+                        Background="Transparent" 
+                        Padding="0,5,0,5"
+                        Margin="0,5,0,5"
+                        Tag="Calculateur" 
+                        MouseEnter="ChangeButtonColorOnMouseEnter" 
+                        MouseLeave="ChangeButtonColorOnMouseLeave">
                         <Button Background="Transparent"
-         Tag="Calculateur"
-         BorderThickness="0"
-         OverridesDefaultStyle="True" 
-         Click="NavButtonClick">
+                            Tag="Calculateur"
+                            BorderThickness="0"
+                            OverridesDefaultStyle="True" 
+                            Click="NavButtonClick">
                             <Button.Template>
                                 <ControlTemplate TargetType="Button">
                                     <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Center">
