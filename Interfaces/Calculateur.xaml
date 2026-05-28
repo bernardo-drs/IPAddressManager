@@ -254,37 +254,48 @@
                             <ColumnDefinition Width="200"/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
-                        <StackPanel Grid.Column="0">
-                            <Viewbox MaxHeight="25" Margin="15,5" HorizontalAlignment="Left">
+                        <Grid Grid.Column="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Viewbox Grid.Row="0" MaxHeight="25" Margin="15,5" HorizontalAlignment="Left">
                                 <TextBlock Foreground="White"  TextWrapping="Wrap">
                             Adresse IP
                                 </TextBlock>
                             </Viewbox>
-                            <Viewbox MaxHeight="25" Margin="15,5" HorizontalAlignment="Left">
+                            <Viewbox Grid.Row="1" MaxHeight="25" Margin="15,5" HorizontalAlignment="Left">
                                 <TextBlock Foreground="White"  TextWrapping="Wrap">
                             Binary :
                                 </TextBlock>
                             </Viewbox>
-                            <Viewbox MaxHeight="25" Margin="15,5" HorizontalAlignment="Left">
+                            <Viewbox Grid.Row="2" MaxHeight="25" Margin="15,5" HorizontalAlignment="Left">
                                 <TextBlock Foreground="White"  TextWrapping="Wrap">
                             Masque de Réseau
                                 </TextBlock>
                             </Viewbox>
-                            <Viewbox MaxHeight="25" Margin="15,5" HorizontalAlignment="Left">
+                            <Viewbox Grid.Row="3" MaxHeight="25" Margin="15,5" HorizontalAlignment="Left">
                                 <TextBlock Foreground="White"  TextWrapping="Wrap">
                             Binary :
                                 </TextBlock>
                             </Viewbox>
-                        </StackPanel>
+                        </Grid>
 
                         <Grid Grid.Column="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
                             
                             <Border
+                                Grid.Row="0"
                                 Background="#0F172A"
                                 Height="32" 
                                 ClipToBounds="True" 
-                                VerticalAlignment="Bottom"
-                                Margin="10,30,15,10"
+                                Margin="10,0,15,15"
+                                VerticalAlignment="Center"
                                 CornerRadius="10">
                                 <Grid>
                                     <Grid.ColumnDefinitions>
@@ -314,10 +325,11 @@
                                 </Grid>
                             </Border>
                             <Border 
+                                Grid.Row="1"
                                 Height="32" 
                                 ClipToBounds="True" 
-                                VerticalAlignment="Bottom"
-                                Margin="10,20,15,0"
+                                VerticalAlignment="Center"
+                                Margin="10,0,15,15"
                                 CornerRadius="10">
                                 <Grid>
                                     <Grid.ColumnDefinitions>
