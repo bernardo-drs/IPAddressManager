@@ -15,6 +15,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Systeme\Systeme.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Images\app_icon.png" />
     <Resource Include="Images\fast_icon.png" />
     <Resource Include="Images\home_icon.png" />
