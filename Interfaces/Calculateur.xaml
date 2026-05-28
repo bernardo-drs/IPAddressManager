@@ -288,7 +288,7 @@
                                 <RowDefinition/>
                                 <RowDefinition/>
                             </Grid.RowDefinitions>
-                            
+
                             <Border
                                 Grid.Row="0"
                                 Background="#0F172A"
@@ -297,32 +297,15 @@
                                 Margin="10,0,15,15"
                                 VerticalAlignment="Center"
                                 CornerRadius="10">
-                                <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="24*"/>
-                                        <ColumnDefinition Width="8*"/>
-                                    </Grid.ColumnDefinitions>
-
-                                    <Border Grid.Column="0">
-                                        <TextBlock
+                                <Border >
+                                    <TextBlock x:Name="TxtBinIpComplete"
                                             FontSize="25"
                                             Foreground="#72DCA3" 
                                             FontWeight="Bold"
                                             VerticalAlignment="Center" 
                                             HorizontalAlignment="Center" 
                                             Margin="5,0"/>
-                                    </Border>
-
-                                    <Border>
-                                        <TextBlock
-                                            Foreground="#A6C1EE" 
-                                            FontSize="25"
-                                            FontWeight="Bold"
-                                            VerticalAlignment="Center" 
-                                            HorizontalAlignment="Center" 
-                                            Margin="5,0"/>
-                                    </Border>
-                                </Grid>
+                                </Border>
                             </Border>
                             <Border 
                                 Grid.Row="1"

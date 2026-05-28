@@ -97,34 +97,34 @@ namespace Interfaces
 
             uint subnetMask = cidr == 0 ? 0 : uint.MaxValue << (32 - cidr);
 
-            uint networkAddress = ipAddress & subnetMask;  
-            uint broadcastAddress = networkAddress | ~subnetMask;  
+            uint networkAddress = ipAddress & subnetMask;
+            uint broadcastAddress = networkAddress | ~subnetMask;
 
             uint firstHost = networkAddress + 1;
             uint lastHost = broadcastAddress - 1;
             uint numberOfHosts = cidr >= 31 ? 0 : broadcastAddress - networkAddress - 1;
 
             TxtAdresse.Text = UintToIpString(networkAddress);
-            TxtBroadcast.Text = UintToIpString(broadcastAddress); 
+            TxtBroadcast.Text = UintToIpString(broadcastAddress);
 
             if (cidr >= 31)
             {
-                TxtPremièreAdresse.Text = "N/A"; 
+                TxtPremièreAdresse.Text = "N/A";
                 TxtDernièreAdresse.Text = "N/A";
-                TxtNombreHôte.Text = "0"; 
+                TxtNombreHôte.Text = "0";
             }
             else
             {
                 TxtPremièreAdresse.Text = UintToIpString(firstHost);
-                TxtDernièreAdresse.Text = UintToIpString(lastHost); 
-                TxtNombreHôte.Text = numberOfHosts.ToString("N0", System.Globalization.CultureInfo.InvariantCulture); 
+                TxtDernièreAdresse.Text = UintToIpString(lastHost);
+                TxtNombreHôte.Text = numberOfHosts.ToString("N0", System.Globalization.CultureInfo.InvariantCulture);
             }
 
             string fullBinaryMask = Convert.ToString(subnetMask, 2).PadLeft(32, '0');
             string formattedBinary = $"{fullBinaryMask.Substring(0, 8)}.{fullBinaryMask.Substring(8, 8)}.{fullBinaryMask.Substring(16, 8)}.{fullBinaryMask.Substring(24, 8)}";
 
             int firstZeroIndex = formattedBinary.IndexOf('0');
-            if (firstZeroIndex == -1) 
+            if (firstZeroIndex == -1)
             {
                 TxtBinMasqueUn.Text = formattedBinary;
                 TxtBinMasqueZero.Text = "";
@@ -136,6 +136,11 @@ namespace Interfaces
             }
 
 
+            string fullBinaryIp = Convert.ToString(ipAddress, 2).PadLeft(32, '0');
+
+            string formattedBinaryIp = $"{fullBinaryIp.Substring(0, 8)}.{fullBinaryIp.Substring(8, 8)}.{fullBinaryIp.Substring(16, 8)}.{fullBinaryIp.Substring(24, 8)}";
+
+            TxtBinIpComplete.Text = formattedBinaryIp;
         }
 
         private string UintToIpString(uint value)
