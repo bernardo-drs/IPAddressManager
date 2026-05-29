@@ -4,6 +4,8 @@
     <File Path="Interfaces/Accueil.xaml.cs" />
     <File Path="Interfaces/Calculateur.xaml" />
     <File Path="Interfaces/Calculateur.xaml.cs" />
+    <File Path="Interfaces/RFC.xaml" />
+    <File Path="Interfaces/RFC.xaml.cs" />
   </Folder>
   <Project Path="Interfaces/Interfaces.csproj" />
   <Project Path="Systeme/Systeme.csproj" Id="1bba0909-41de-42f0-aac2-232ecfd3ca54" />

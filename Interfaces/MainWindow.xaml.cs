@@ -20,7 +20,6 @@ namespace Interfaces
 
         string SelectedPage = "Accueil";
         object? currentNavButton;
-        Calculateur maPageCalculateur = new Calculateur();
 
         public MainWindow()
         {
@@ -44,7 +43,11 @@ namespace Interfaces
                     break;
 
                 case "Calculateur":
-                    page = maPageCalculateur;
+                    page = new Calculateur();
+                    break;
+
+                case "RFC":
+                    page = new RFC();
                     break;
 
                 default:
