@@ -103,6 +103,7 @@ namespace Interfaces
             uint firstHost = networkAddress + 1;
             uint lastHost = broadcastAddress - 1;
             uint numberOfHosts = cidr >= 31 ? 0 : broadcastAddress - networkAddress - 1;
+            uint numberOfIp = (uint)Math.Pow(2, 32 - cidr);
 
             TxtAdresse.Text = UintToIpString(networkAddress);
             TxtBroadcast.Text = UintToIpString(broadcastAddress);
@@ -112,12 +113,14 @@ namespace Interfaces
                 TxtPremièreAdresse.Text = "N/A";
                 TxtDernièreAdresse.Text = "N/A";
                 TxtNombreHôte.Text = "0";
+                TxtNombreIP.Text = cidr == 32 ? "1" : "2";
             }
             else
             {
                 TxtPremièreAdresse.Text = UintToIpString(firstHost);
                 TxtDernièreAdresse.Text = UintToIpString(lastHost);
                 TxtNombreHôte.Text = numberOfHosts.ToString("N0", System.Globalization.CultureInfo.InvariantCulture);
+                TxtNombreIP.Text = numberOfIp.ToString("N0", System.Globalization.CultureInfo.InvariantCulture);
             }
 
             string fullBinaryMask = Convert.ToString(subnetMask, 2).PadLeft(32, '0');
@@ -141,11 +144,42 @@ namespace Interfaces
             string formattedBinaryIp = $"{fullBinaryIp.Substring(0, 8)}.{fullBinaryIp.Substring(8, 8)}.{fullBinaryIp.Substring(16, 8)}.{fullBinaryIp.Substring(24, 8)}";
 
             TxtBinIpComplete.Text = formattedBinaryIp;
+
+            string classeIp = "";
+
+            if (ip1 >= 1 && ip1 <= 127)
+            {
+                classeIp = "Classe A";
+            }
+            else if (ip1 >= 128 && ip1 <= 191)
+            {
+                classeIp = "Classe B";
+            }
+            else if (ip1 >= 192 && ip1 <= 223)
+            {
+                classeIp = "Classe C";
+            }
+            else if (ip1 >= 224 && ip1 <= 239)
+            {
+                classeIp = "Classe D";
+            }
+            else if (ip1 >= 240 && ip1 <= 255)
+            {
+                classeIp = "Classe E";
+            }
+            else
+            {
+                classeIp = "Inconnue";
+            }
+
+            TxtClasseIp.Text = classeIp;
         }
 
         private string UintToIpString(uint value)
         {
             return $"{(value >> 24) & 0xFF}.{(value >> 16) & 0xFF}.{(value >> 8) & 0xFF}.{value & 0xFF}";
         }
+
+
     }
 }

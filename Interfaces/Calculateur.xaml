@@ -109,20 +109,43 @@
                                 </Viewbox>
 
                             </Grid>
-                            <Viewbox Grid.Row="3" MaxHeight="30" HorizontalAlignment="Left" Margin="15,5,0,0">
-                                <TextBlock Foreground="#F8FAFC">
-                                Masque en décimal
-                                </TextBlock>
-                            </Viewbox>
-
-                            <Border Background="#0F172A" CornerRadius="10" Grid.Row="4" Margin="10,10,250,10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                                <Viewbox MaxHeight="35" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15,5,0,0">
-                                    <TextBlock x:Name="TxtDecimal" Foreground="#F8FAFC">
-                                     ...
+                            <Grid Grid.Row="3">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Viewbox Grid.Column="0" MaxHeight="30" HorizontalAlignment="Left" Margin="15,5,0,0">
+                                    <TextBlock Foreground="#F8FAFC">
+                                    Masque en décimal
                                     </TextBlock>
                                 </Viewbox>
-                            </Border>
+                                <Viewbox Grid.Column="1" MaxHeight="30" HorizontalAlignment="Left" Margin="15,5,0,0">
+                                    <TextBlock Foreground="#F8FAFC">
+                                    Classe de l'adresse IP
+                                    </TextBlock>
+                                </Viewbox>
+                            </Grid>
 
+                            <Grid Grid.Row="4">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Border Background="#0F172A" CornerRadius="10" Grid.Column="0" Margin="10,10,10,10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                    <Viewbox MaxHeight="35" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="15,5,0,0">
+                                        <TextBlock x:Name="TxtDecimal" Foreground="#F8FAFC">
+
+                                        </TextBlock>
+                                    </Viewbox>
+                                </Border>
+                                <Border Background="#0F172A" CornerRadius="10" Grid.Column="1" Margin="10,10,10,10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                    <Viewbox MaxHeight="35" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="15,5,0,0">
+                                        <TextBlock  x:Name="TxtClasseIp" Foreground="#F8FAFC">
+
+                                        </TextBlock>
+                                    </Viewbox>
+                                </Border>
+                            </Grid>
                         </Grid>
 
                     </Border>
@@ -150,11 +173,12 @@
                         <Grid.RowDefinitions>
                             <RowDefinition Height="39*"/>
                             <RowDefinition Height="1.5*"/>
-                            <RowDefinition Height="34*"/>
-                            <RowDefinition Height="34*"/>
-                            <RowDefinition Height="34*"/>
-                            <RowDefinition Height="34*"/>
-                            <RowDefinition Height="34*"/>
+                            <RowDefinition Height="28.3*"/>
+                            <RowDefinition Height="28.3*"/>
+                            <RowDefinition Height="28.3*"/>
+                            <RowDefinition Height="28.3*"/>
+                            <RowDefinition Height="28.3*"/>
+                            <RowDefinition Height="28.3*"/>
                         </Grid.RowDefinitions>
 
                         <Grid.ColumnDefinitions>
@@ -189,44 +213,56 @@
                                 Adresse de Broadcast :
                             </TextBlock>
                         </Viewbox>
+                        <Viewbox Grid.Row="7" Grid.ColumnSpan="2" MaxHeight="23" HorizontalAlignment="Left" Margin="15,5,0,5">
+                            <TextBlock Foreground="#F8FAFC">
+                                Nombre d'IPs Valides :
+                            </TextBlock>
+                        </Viewbox>
                         <Viewbox Grid.Row="6" Grid.ColumnSpan="2" MaxHeight="23" HorizontalAlignment="Left" Margin="15,5,0,5">
                             <TextBlock Foreground="#F8FAFC">
-                                Nombre d'Hôtes Valides :
+                                Nombre d'IPs  :
                             </TextBlock>
                         </Viewbox>
 
-                        <Border Background="#0F172A" CornerRadius="10" Grid.Column="1" Grid.Row="2" Margin="10,10,15,10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                            <Viewbox Grid.Column="1" MaxHeight="35" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,5,0,0">
+                        <Border Background="#0F172A" CornerRadius="10" Grid.Column="1" Grid.Row="2" Margin="10,10,15,5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                            <Viewbox Grid.Column="1" MaxHeight="40" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,5,0,0">
                                 <TextBlock x:Name="TxtAdresse" Foreground="#F8FAFC">
                                 
                                 </TextBlock>
                             </Viewbox>
                         </Border>
-                        <Border Background="#0F172A" CornerRadius="10" Grid.Column="1" Grid.Row="3" Margin="10,10,15,10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                            <Viewbox Grid.Column="1" MaxHeight="35" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,5,0,0">
+                        <Border Background="#0F172A" CornerRadius="10" Grid.Column="1" Grid.Row="3" Margin="10,7.5,15,7.5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                            <Viewbox Grid.Column="1" MaxHeight="35" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,5,0,0">
                                 <TextBlock x:Name="TxtPremièreAdresse" Foreground="#F8FAFC">
                                 
                                 </TextBlock>
                             </Viewbox>
                         </Border>
-                        <Border Background="#0F172A" CornerRadius="10" Grid.Column="1" Grid.Row="4" Margin="10,10,15,10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                            <Viewbox Grid.Column="1" MaxHeight="35" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,5,0,0">
+                        <Border Background="#0F172A" CornerRadius="10" Grid.Column="1" Grid.Row="4" Margin="10,7.5,15,7.5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                            <Viewbox Grid.Column="1" MaxHeight="35" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,5,0,0">
                                 <TextBlock x:Name="TxtDernièreAdresse" Foreground="#F8FAFC">
                               
                                 </TextBlock>
                             </Viewbox>
                         </Border>
-                        <Border Background="#0F172A" CornerRadius="10" Grid.Column="1" Grid.Row="5" Margin="10,10,15,10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                            <Viewbox Grid.Column="1" MaxHeight="35" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,5,0,0">
+                        <Border Background="#0F172A" CornerRadius="10" Grid.Column="1" Grid.Row="5" Margin="10,7.5,15,7.5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                            <Viewbox Grid.Column="1" MaxHeight="35" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,5,0,0">
                                 <TextBlock x:Name="TxtBroadcast" Foreground="#F8FAFC">
                           
                                 </TextBlock>
                             </Viewbox>
                         </Border>
-                        <Border Background="#0F172A" CornerRadius="10" Grid.Column="1" Grid.Row="6" Margin="15,10,15,10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                            <Viewbox Grid.Column="1" MaxHeight="35" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,5,0,0">
+                        <Border Background="#0F172A" CornerRadius="10" Grid.Column="1" Grid.Row="7" Margin="10,5,15,10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                            <Viewbox Grid.Column="1" MaxHeight="35" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,5,0,0">
                                 <TextBlock x:Name="TxtNombreHôte" Foreground="#F8FAFC" Margin="0,0,0,0">
-                              
+
+                                </TextBlock>
+                            </Viewbox>
+                        </Border>
+                        <Border Background="#0F172A" CornerRadius="10" Grid.Column="1" Grid.Row="6" Margin="10,7.5,15,7.5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                            <Viewbox Grid.Column="1" MaxHeight="35" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,5,0,0">
+                                <TextBlock x:Name="TxtNombreIP" Foreground="#F8FAFC">
+
                                 </TextBlock>
                             </Viewbox>
                         </Border>
@@ -268,7 +304,7 @@
                             </Viewbox>
                             <Viewbox Grid.Row="1" MaxHeight="25" Margin="15,5" HorizontalAlignment="Left">
                                 <TextBlock Foreground="White"  TextWrapping="Wrap">
-                            Binary :
+                            Binaire :
                                 </TextBlock>
                             </Viewbox>
                             <Viewbox Grid.Row="2" MaxHeight="25" Margin="15,5" HorizontalAlignment="Left">
@@ -278,7 +314,7 @@
                             </Viewbox>
                             <Viewbox Grid.Row="3" MaxHeight="25" Margin="15,5" HorizontalAlignment="Left">
                                 <TextBlock Foreground="White"  TextWrapping="Wrap">
-                            Binary :
+                            Binaire :
                                 </TextBlock>
                             </Viewbox>
                         </Grid>
