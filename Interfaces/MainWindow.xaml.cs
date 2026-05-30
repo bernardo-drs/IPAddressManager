@@ -50,6 +50,10 @@ namespace Interfaces
                     page = new RFC();
                     break;
 
+                case "About":
+                    page = new About();
+                    break;
+
                 default:
                     break;
             }

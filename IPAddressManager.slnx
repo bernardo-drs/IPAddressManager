@@ -1,5 +1,7 @@
 <Solution>
   <Folder Name="/Pages/">
+    <File Path="Interfaces/About.xaml" />
+    <File Path="Interfaces/About.xaml.cs" />
     <File Path="Interfaces/Accueil.xaml" />
     <File Path="Interfaces/Accueil.xaml.cs" />
     <File Path="Interfaces/Calculateur.xaml" />

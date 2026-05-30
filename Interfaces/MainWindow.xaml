@@ -255,7 +255,7 @@
                      Foreground="#F8FAFC"
                      FontStretch="Normal"
                      FontSize="25">
-                     About
+                     À propos
                                         </TextBlock>
                                     </Viewbox>
                                 </DockPanel>
