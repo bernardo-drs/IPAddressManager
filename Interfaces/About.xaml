@@ -24,9 +24,65 @@
 
         <Viewbox Stretch="Uniform" Grid.Column="1" Grid.Row="1" Margin="0,0,0,0" HorizontalAlignment="Left">
             <TextBlock x:Name="Title" Foreground="#F8FAFC">
-            À propos
+            À propos de l'application
             </TextBlock>
         </Viewbox>
         <Rectangle Fill="#808080" Grid.Column="1" Grid.Row="2"></Rectangle>
+
+        <Viewbox Grid.Column="1" Grid.Row="3" 
+                 Stretch="Uniform" 
+                 HorizontalAlignment="Center" 
+                 VerticalAlignment="Center"
+                 Margin="20,20,20,20">
+
+            <Border Background="#131C2E" 
+                    BorderBrush="#1E293B" 
+                    BorderThickness="1" 
+                    CornerRadius="8" 
+                    MinWidth="550"
+                    MaxWidth="700"
+                    Padding="35,30,35,30">
+
+                <Border.Effect>
+                    <DropShadowEffect Color="#000000" BlurRadius="25" ShadowDepth="4" Opacity="0.5"/>
+                </Border.Effect>
+
+                <StackPanel>
+                    <WrapPanel Margin="0,0,0,5">
+                        <TextBlock Text="Version" Foreground="#38BDF8" FontSize="30" FontWeight="Bold" FontFamily="Segoe UI"/>
+                        <TextBlock Text=" 1.0.0" Foreground="#94A3B8" FontSize="30" FontWeight="Light" FontFamily="Segoe UI" Margin="5,0,0,0"/>
+                    </WrapPanel>
+
+                    <TextBlock Text="Calculateur de Masque Réseau" Foreground="#F8FAFC" FontSize="25" FontWeight="SemiBold" Margin="0,0,0,20" FontFamily="Segoe UI"/>
+
+                    <TextBlock Text="Cette application a été conçue pour aider les administrateurs réseau, les développeurs et les étudiants à identifier et comprendre instantanément le rôle des plages d'adresses IPv4 réservées." 
+                           Foreground="#CBD5E1" FontSize="20" LineHeight="20" TextWrapping="Wrap" Margin="0,0,0,20" FontFamily="Segoe UI" TextAlignment="Justify"/>
+
+                    <TextBlock Text="Sources utilisées" Foreground="#F8FAFC" FontSize="25" FontWeight="Bold" Margin="0,0,0,5" FontFamily="Segoe UI"/>
+                    <TextBlock Text="Données récupérées auprès de l'IETF (Registre des adresses IPv4 à usage spécial — RFC 6890)." TextWrapping="Wrap" TextAlignment="Justify" Foreground="#CBD5E1" FontSize="20" Margin="0,0,0,20" FontFamily="Segoe UI"/>
+
+                    <TextBlock Text="Auteurs de la création de l'application" Foreground="#F8FAFC" FontSize="25" FontWeight="Bold" Margin="0,0,0,10" FontFamily="Segoe UI"/>
+
+                    <Grid Margin="0,0,0,10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Grid.Column="0">
+                            <TextBlock Text="• Dolidon Clémence" Foreground="#CBD5E1" FontSize="20" Margin="0,3,0,3" FontFamily="Segoe UI"/>
+                            <TextBlock Text="• Da Rosa Simoes Bernardo" Foreground="#CBD5E1" FontSize="20" Margin="0,3,0,3" FontFamily="Segoe UI"/>
+                            <TextBlock Text="• Péchon Loic" Foreground="#CBD5E1" FontSize="20" Margin="0,3,0,3" FontFamily="Segoe UI"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="1">
+                            <TextBlock Text="• Duthilleul Maëlys" Foreground="#CBD5E1" FontSize="20" Margin="0,3,0,3" FontFamily="Segoe UI"/>
+                            <TextBlock Text="• Couillerville Jiao" Foreground="#CBD5E1" FontSize="20" Margin="0,3,0,3" FontFamily="Segoe UI"/>
+                            <TextBlock Text="• Delaunay Paul" Foreground="#CBD5E1" FontSize="20" Margin="0,3,0,3" FontFamily="Segoe UI"/>
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+            </Border>
+        </Viewbox>
     </Grid>
 </Page>
