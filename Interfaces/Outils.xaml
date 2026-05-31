@@ -29,24 +29,40 @@
         </Viewbox>
         <Rectangle Fill="#808080" Grid.Column="1" Grid.Row="2"></Rectangle>
 
-        <Viewbox Grid.Column="1" Grid.Row="3" Stretch="Uniform" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <UniformGrid Columns="4" Margin="10">
+        <Grid Grid.Row="3" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
 
-                <Border Background="#131C2E" BorderBrush="#1E293B" BorderThickness="1" CornerRadius="8" Margin="10,10,10,10">
-                    <Border.Effect>
-                        <DropShadowEffect Color="#000000" BlurRadius="10" ShadowDepth="2" Opacity="0.3"/>
-                    </Border.Effect>
+            <Border Grid.Column="0" Grid.Row="0" 
+            Background="#1E293B" 
+            CornerRadius="10" 
+            Margin="10" 
+            HorizontalAlignment="Stretch" 
+            VerticalAlignment="Stretch">
+                <Viewbox Stretch="Uniform" Margin="15">
                     <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
                         <TextBlock Text="1010&#x0a;0101" Foreground="#38BDF8" FontSize="22" FontWeight="Bold" LineHeight="20" HorizontalAlignment="Center" Margin="0,0,0,5" FontFamily="Segoe UI"/>
                         <TextBlock Text="Conversion" Foreground="#F8FAFC" FontSize="14" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,5" FontFamily="Segoe UI"/>
                         <TextBlock Text="Convertir IP, binaire,&#x0a;hexadécimal" Foreground="#94A3B8" FontSize="11" TextAlignment="Center" TextWrapping="Wrap" FontFamily="Segoe UI" Margin="0,0,0,5"/>
                     </StackPanel>
-                </Border>
+                </Viewbox>
+            </Border>
 
-                <Border Background="#131C2E" BorderBrush="#1E293B" BorderThickness="1" CornerRadius="8" Margin="10,10,10,10">
-                    <Border.Effect>
-                        <DropShadowEffect Color="#000000" BlurRadius="10" ShadowDepth="2" Opacity="0.3"/>
-                    </Border.Effect>
+            <Border Grid.Column="1" Grid.Row="0" 
+            Background="#1E293B" 
+            CornerRadius="10" 
+            Margin="10" 
+            HorizontalAlignment="Stretch" 
+            VerticalAlignment="Stretch">
+                <Viewbox Stretch="Uniform" Margin="15">
                     <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
                         <Border BorderBrush="#38BDF8" BorderThickness="2" CornerRadius="15" Width="40" Height="40" Margin="0,0,0,12" HorizontalAlignment="Center">
                             <TextBlock Text="C" Foreground="#38BDF8" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-2,0,0" FontFamily="Segoe UI"/>
@@ -54,75 +70,100 @@
                         <TextBlock Text="Classe IP" Foreground="#F8FAFC" FontSize="14" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,5" FontFamily="Segoe UI"/>
                         <TextBlock Text="Déterminer la classe&#x0a;d'une adresse IP" Foreground="#94A3B8" FontSize="11" TextAlignment="Center" TextWrapping="Wrap" FontFamily="Segoe UI"/>
                     </StackPanel>
-                </Border>
+                </Viewbox>
+            </Border>
 
-                <Border Background="#131C2E" BorderBrush="#1E293B" BorderThickness="1" CornerRadius="8" Margin="10,10,10,10">
-                    <Border.Effect>
-                        <DropShadowEffect Color="#000000" BlurRadius="10" ShadowDepth="2" Opacity="0.3"/>
-                    </Border.Effect>
+            <Border Grid.Column="2" Grid.Row="0" 
+            Background="#1E293B" 
+            CornerRadius="10" 
+            Margin="10" 
+            HorizontalAlignment="Stretch" 
+            VerticalAlignment="Stretch">
+                <Viewbox Stretch="Uniform" Margin="15">
                     <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
                         <TextBlock Text="✓" Foreground="#38BDF8" FontSize="32" HorizontalAlignment="Center" Margin="0,0,0,15" FontFamily="Segoe UI Symbol"/>
                         <TextBlock Text="Tester une IP" Foreground="#F8FAFC" FontSize="14" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,5" FontFamily="Segoe UI"/>
                         <TextBlock Text="Vérifier si une IP est&#x0a; valide et son type" Foreground="#94A3B8" FontSize="11" TextAlignment="Center" TextWrapping="Wrap" FontFamily="Segoe UI"/>
                     </StackPanel>
-                </Border>
+                </Viewbox>
+            </Border>
 
-                <Border Background="#131C2E" BorderBrush="#1E293B" BorderThickness="1" CornerRadius="8" Margin="10,10,10,10">
-                    <Border.Effect>
-                        <DropShadowEffect Color="#000000" BlurRadius="10" ShadowDepth="2" Opacity="0.3"/>
-                    </Border.Effect>
+
+            <Border Grid.Column="3" Grid.Row="0" 
+            Background="#1E293B" 
+            CornerRadius="10" 
+            Margin="10" 
+            HorizontalAlignment="Stretch" 
+            VerticalAlignment="Stretch">
+                <Viewbox Stretch="Uniform" Margin="15">
                     <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-                        <TextBlock Text="👥" Foreground="#38BDF8" FontSize="30" HorizontalAlignment="Center" Margin="0,0,0,15" FontFamily="Segoe UI Symbol"/>
+                        <TextBlock Text="👥" Foreground="#38BDF8" FontSize="35" HorizontalAlignment="Center" Margin="0,0,0,15" FontFamily="Segoe UI Symbol"/>
                         <TextBlock Text="Nombre d'hôtes" Foreground="#F8FAFC" FontSize="14" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,5" FontFamily="Segoe UI"/>
                         <TextBlock Text="Calculer le nombre&#x0a;d'hôtes utilisables" Foreground="#94A3B8" FontSize="11" TextAlignment="Center" TextWrapping="Wrap" FontFamily="Segoe UI"/>
                     </StackPanel>
-                </Border>
+                </Viewbox>
+            </Border>
 
-                <Border Background="#131C2E" BorderBrush="#1E293B" BorderThickness="1" CornerRadius="8" Margin="10,10,10,10">
-                    <Border.Effect>
-                        <DropShadowEffect Color="#000000" BlurRadius="10" ShadowDepth="2" Opacity="0.3"/>
-                    </Border.Effect>
+            <Border Grid.Column="0" Grid.Row="1" 
+            Background="#1E293B" 
+            CornerRadius="10" 
+            Margin="10" 
+            HorizontalAlignment="Stretch" 
+            VerticalAlignment="Stretch">
+                <Viewbox Stretch="Uniform" Margin="15">
                     <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-                        <TextBlock Text="🌐" Foreground="#38BDF8" FontSize="32" HorizontalAlignment="Center" Margin="0,0,0,12" FontFamily="Segoe UI Symbol"/>
+                        <TextBlock Text="🌐" Foreground="#38BDF8" FontSize="40" HorizontalAlignment="Center" Margin="0,0,0,12" FontFamily="Segoe UI Symbol"/>
                         <TextBlock Text="Résolution IP" Foreground="#F8FAFC" FontSize="14" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,5" FontFamily="Segoe UI"/>
                         <TextBlock Text="Obtenir des informations&#x0a;sur une adresse IP" Foreground="#94A3B8" FontSize="11" TextAlignment="Center" TextWrapping="Wrap" FontFamily="Segoe UI"/>
                     </StackPanel>
-                </Border>
+                </Viewbox>
+            </Border>
 
-                <Border Background="#131C2E" BorderBrush="#1E293B" BorderThickness="1" CornerRadius="8" Margin="10,10,10,10">
-                    <Border.Effect>
-                        <DropShadowEffect Color="#000000" BlurRadius="10" ShadowDepth="2" Opacity="0.3"/>
-                    </Border.Effect>
+            <Border Grid.Column="1" Grid.Row="1" 
+            Background="#1E293B" 
+            CornerRadius="10" 
+            Margin="10" 
+            HorizontalAlignment="Stretch" 
+            VerticalAlignment="Stretch">
+                <Viewbox Stretch="Uniform" Margin="15">
                     <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-                        <TextBlock Text="⚙" Foreground="#38BDF8" FontSize="32" HorizontalAlignment="Center" Margin="0,0,0,12" FontFamily="Segoe UI Symbol"/>
+                        <TextBlock Text="⚙" Foreground="#38BDF8" FontSize="45" HorizontalAlignment="Center" Margin="0,0,0,12" FontFamily="Segoe UI Symbol"/>
                         <TextBlock Text="Masque Réseau" Foreground="#F8FAFC" FontSize="14" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,5" FontFamily="Segoe UI"/>
                         <TextBlock Text="Analyser un masque de&#x0a;sous-réseau ou un CIDR" Foreground="#94A3B8" FontSize="11" TextAlignment="Center" TextWrapping="Wrap" FontFamily="Segoe UI"/>
                     </StackPanel>
-                </Border>
+                </Viewbox>
+            </Border>
 
-                <Border Background="#131C2E" BorderBrush="#1E293B" BorderThickness="1" CornerRadius="8" Margin="10,10,10,10">
-                    <Border.Effect>
-                        <DropShadowEffect Color="#000000" BlurRadius="10" ShadowDepth="2" Opacity="0.3"/>
-                    </Border.Effect>
+            <Border Grid.Column="2" Grid.Row="1" 
+            Background="#1E293B" 
+            CornerRadius="10" 
+            Margin="10" 
+            HorizontalAlignment="Stretch" 
+            VerticalAlignment="Stretch">
+                <Viewbox Stretch="Uniform" Margin="15">
                     <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-                        <TextBlock Text="⚃" Foreground="#38BDF8" FontSize="34" HorizontalAlignment="Center" Margin="0,0,0,10" FontFamily="Segoe UI Symbol"/>
+                        <TextBlock Text="⚃" Foreground="#38BDF8" FontSize="45" HorizontalAlignment="Center" Margin="0,0,0,10" FontFamily="Segoe UI Symbol"/>
                         <TextBlock Text="Découpage FLSM" Foreground="#F8FAFC" FontSize="14" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,5" FontFamily="Segoe UI"/>
                         <TextBlock Text="Sous-réseaux à masques&#x0a;fixes (Fixed Length)" Foreground="#94A3B8" FontSize="11" TextAlignment="Center" TextWrapping="Wrap" FontFamily="Segoe UI"/>
                     </StackPanel>
-                </Border>
+                </Viewbox>
+            </Border>
 
-                <Border Background="#131C2E" BorderBrush="#1E293B" BorderThickness="1" CornerRadius="8" Margin="10,10,10,10">
-                    <Border.Effect>
-                        <DropShadowEffect Color="#000000" BlurRadius="10" ShadowDepth="2" Opacity="0.3"/>
-                    </Border.Effect>
+            <Border Grid.Column="3" Grid.Row="1" 
+            Background="#1E293B" 
+            CornerRadius="10" 
+            Margin="10" 
+            HorizontalAlignment="Stretch" 
+            VerticalAlignment="Stretch">
+                <Viewbox Stretch="Uniform" Margin="15">
                     <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-                        <TextBlock Text="⚄" Foreground="#38BDF8" FontSize="34" HorizontalAlignment="Center" Margin="0,0,0,10" FontFamily="Segoe UI Symbol"/>
+                        <TextBlock Text="⚄" Foreground="#38BDF8" FontSize="45" HorizontalAlignment="Center" Margin="0,0,0,10" FontFamily="Segoe UI Symbol"/>
                         <TextBlock Text="Découpage VLSM" Foreground="#F8FAFC" FontSize="14" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,5" FontFamily="Segoe UI"/>
                         <TextBlock Text="Sous-réseaux à masques&#x0a;variables (Variable Length)" Foreground="#94A3B8" FontSize="11" TextAlignment="Center" TextWrapping="Wrap" FontFamily="Segoe UI"/>
                     </StackPanel>
-                </Border>
-            </UniformGrid>
-        </Viewbox>
+                </Viewbox>
+            </Border>
+        </Grid>
 
     </Grid>
 </Page>
