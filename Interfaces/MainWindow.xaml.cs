@@ -56,6 +56,9 @@ namespace Interfaces
                 case "Outils":
                     page = new Outils();
                     break;
+                case "VLSM_FLSM":
+                    page = new VLSM_FLSM();
+                    break;
 
                 default:
                     break;

@@ -7,11 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow" MinHeight="720" MinWidth="1280" Height="720" Width="1280" Background="#0F172A" WindowStartupLocation="CenterScreen">
     <Grid x:Name="MainGrid">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="7*"/>
-                <ColumnDefinition Width="25*"/>
-            </Grid.ColumnDefinitions>
-            <Grid x:Name="SideGrid" VerticalAlignment="Stretch" Grid.Column="0" Background="#1E293B">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="25*"/>
+        </Grid.ColumnDefinitions>
+        <Grid x:Name="SideGrid" VerticalAlignment="Stretch" Grid.Column="0" Background="#1E293B">
             <Grid.ColumnDefinitions >
                 <ColumnDefinition Width="30*"/>
                 <ColumnDefinition Width="178*"/>
@@ -20,22 +20,22 @@
             <StackPanel Grid.Column="1" 
                      VerticalAlignment="Stretch"
                      HorizontalAlignment="Stretch">
-                    <StackPanel Margin="0,10,0,20">
-                        <Viewbox Stretch="Uniform" MaxHeight="175">
-                            <Image Source="/Images/app_icon.png"
+                <StackPanel Margin="0,10,0,20">
+                    <Viewbox Stretch="Uniform" MaxHeight="175">
+                        <Image Source="/Images/app_icon.png"
                             HorizontalAlignment="Center">
-                            </Image>
-                        </Viewbox>
-                        <Viewbox Stretch="Uniform">
-                            <TextBlock Foreground="#F8FAFC"
+                        </Image>
+                    </Viewbox>
+                    <Viewbox Stretch="Uniform">
+                        <TextBlock Foreground="#F8FAFC"
                                    HorizontalAlignment="Center">
                                    IP Address Manager
-                            </TextBlock>
-                        </Viewbox>
+                        </TextBlock>
+                    </Viewbox>
                 </StackPanel>
 
-                    <!--Accueil Button-->
-                    <Border x:Name="BtnAccueil" 
+                <!--Accueil Button-->
+                <Border x:Name="BtnAccueil" 
                      HorizontalAlignment="Stretch"
                      CornerRadius="5" 
                      Background="Transparent" 
@@ -44,15 +44,15 @@
                      Tag="Accueil" 
                      MouseEnter="ChangeButtonColorOnMouseEnter" 
                      MouseLeave="ChangeButtonColorOnMouseLeave">
-                        <Button Background="Transparent"
+                    <Button Background="Transparent"
                          Tag="Accueil"
                          BorderThickness="0"
                          OverridesDefaultStyle="True" 
                          Click="NavButtonClick">
-                            <Button.Template>
-                                <ControlTemplate TargetType="Button">
-                                    <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Center">
-                                        <Image VerticalAlignment="Center" 
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                                    <Image VerticalAlignment="Center" 
                                         Source="/Images/home_icon.png" 
                                         Width="30" 
                                         Height="30"
@@ -67,14 +67,14 @@
                                         </TextBlock>
                                     </Viewbox>
                                 </DockPanel>
-                                </ControlTemplate>
-                            </Button.Template>
-                        </Button>
-                    </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </Border>
 
-                    <!--Calculateur Button-->
+                <!--Calculateur Button-->
 
-                    <Border x:Name="BtnCalculateur" 
+                <Border x:Name="BtnCalculateur" 
                         HorizontalAlignment="Stretch"
                         CornerRadius="5" 
                         Background="Transparent" 
@@ -83,16 +83,16 @@
                         Tag="Calculateur" 
                         MouseEnter="ChangeButtonColorOnMouseEnter" 
                         MouseLeave="ChangeButtonColorOnMouseLeave">
-                        <Button Background="Transparent"
+                    <Button Background="Transparent"
                             Tag="Calculateur"
                             BorderThickness="0"
                             OverridesDefaultStyle="True" 
                             Click="NavButtonClick">
-                            <Button.Template>
-                                <ControlTemplate TargetType="Button">
-                                    <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Center">
-                                        <Image VerticalAlignment="Center" 
-                        Source="/Images/home_icon.png" 
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                                    <Image 
+                        Source="/Images/calculer_icon.png" 
                         Width="30" 
                         Height="30"
                         Margin="10,0,0,0"/>
@@ -106,14 +106,14 @@
                                         </TextBlock>
                                     </Viewbox>
                                 </DockPanel>
-                                </ControlTemplate>
-                            </Button.Template>
-                        </Button>
-                    </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </Border>
 
-                    <!--Button VLSM/FLSM-->
+                <!--Button VLSM/FLSM-->
 
-                    <Border x:Name="BtnVLSM_FLSM" 
+                <Border x:Name="BtnVLSM_FLSM" 
      HorizontalAlignment="Stretch"
      CornerRadius="5" 
      Background="Transparent" 
@@ -122,17 +122,17 @@
      Tag="VLSM_FLSM" 
      MouseEnter="ChangeButtonColorOnMouseEnter" 
      MouseLeave="ChangeButtonColorOnMouseLeave">
-                        <Button Background="Transparent"
+                    <Button Background="Transparent"
          Tag="VLSM_FLSM"
          BorderThickness="0"
          OverridesDefaultStyle="True" 
          Click="NavButtonClick">
-                            <Button.Template>
-                                <ControlTemplate TargetType="Button">
-                                    <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Center">
-                                        <Image VerticalAlignment="Center" 
-                        Source="/Images/home_icon.png" 
-                        Width="30" 
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                                    <Image VerticalAlignment="Center" 
+                        Source="/Images/FLSM.png" 
+                        Width="40" 
                         Height="30"
                         Margin="10,0,0,0"/>
                                     <Viewbox Stretch="Uniform" MaxWidth="150" MaxHeight="40" HorizontalAlignment="Left">
@@ -145,13 +145,13 @@
                                         </TextBlock>
                                     </Viewbox>
                                 </DockPanel>
-                                </ControlTemplate>
-                            </Button.Template>
-                        </Button>
-                    </Border>
-                    <!--Button RFC-->
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </Border>
+                <!--Button RFC-->
 
-                    <Border x:Name="BtnRFC" 
+                <Border x:Name="BtnRFC" 
      HorizontalAlignment="Stretch"
      CornerRadius="5" 
      Background="Transparent" 
@@ -160,16 +160,16 @@
      Tag="RFC" 
      MouseEnter="ChangeButtonColorOnMouseEnter" 
      MouseLeave="ChangeButtonColorOnMouseLeave">
-                        <Button Background="Transparent"
+                    <Button Background="Transparent"
          Tag="RFC"
          BorderThickness="0"
          OverridesDefaultStyle="True" 
          Click="NavButtonClick">
-                            <Button.Template>
-                                <ControlTemplate TargetType="Button">
-                                    <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Center">
-                                        <Image VerticalAlignment="Center" 
-                        Source="/Images/home_icon.png" 
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                                    <Image VerticalAlignment="Center" 
+                        Source="/Images/RFC.png" 
                         Width="30" 
                         Height="30"
                         Margin="10,0,0,0"/>
@@ -183,13 +183,13 @@
                                         </TextBlock>
                                     </Viewbox>
                                 </DockPanel>
-                                </ControlTemplate>
-                            </Button.Template>
-                        </Button>
-                    </Border>
-                    <!--Button Outils-->
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </Border>
+                <!--Button Outils-->
 
-                    <Border x:Name="BtnOutils" 
+                <Border x:Name="BtnOutils" 
      HorizontalAlignment="Stretch"
      CornerRadius="5" 
      Background="Transparent" 
@@ -198,16 +198,16 @@
      Tag="Outils" 
      MouseEnter="ChangeButtonColorOnMouseEnter" 
      MouseLeave="ChangeButtonColorOnMouseLeave">
-                        <Button Background="Transparent"
+                    <Button Background="Transparent"
          Tag="Outils"
          BorderThickness="0"
          OverridesDefaultStyle="True" 
          Click="NavButtonClick">
-                            <Button.Template>
-                                <ControlTemplate TargetType="Button">
-                                    <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Center">
-                                        <Image VerticalAlignment="Center" 
-                        Source="/Images/home_icon.png" 
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                                    <Image VerticalAlignment="Center" 
+                        Source="/Images/Outils.png" 
                         Width="30" 
                         Height="30"
                         Margin="10,0,0,0"/>
@@ -221,11 +221,11 @@
                                         </TextBlock>
                                     </Viewbox>
                                 </DockPanel>
-                                </ControlTemplate>
-                            </Button.Template>
-                        </Button>
-                    </Border>
-                    <!--Button à propos-->
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </Border>
+                <!--Button à propos-->
 
                 <Border x:Name="BtnAbout" 
      HorizontalAlignment="Stretch"
@@ -245,7 +245,7 @@
                             <ControlTemplate TargetType="Button">
                                 <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Center">
                                     <Image VerticalAlignment="Center" 
-                        Source="/Images/home_icon.png" 
+                        Source="/Images/About.png" 
                         Width="30" 
                         Height="30"
                         Margin="10,0,0,0"/>
@@ -278,7 +278,7 @@
             </StackPanel>
         </Grid>
         <Frame Grid.Column="1" x:Name="MainFrame" NavigationUIVisibility="Hidden">
-            
+
         </Frame>
     </Grid>
 </Window>
