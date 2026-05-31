@@ -44,7 +44,7 @@
             <Border Grid.Column="0" Grid.Row="0" 
             Background="#1E293B" 
             CornerRadius="10" 
-            Margin="10" 
+            Margin="10,20,10,10" 
             HorizontalAlignment="Stretch" 
             VerticalAlignment="Stretch">
                 <Viewbox Stretch="Uniform" Margin="15">
@@ -59,7 +59,7 @@
             <Border Grid.Column="1" Grid.Row="0" 
             Background="#1E293B" 
             CornerRadius="10" 
-            Margin="10" 
+            Margin="10,20,10,10"
             HorizontalAlignment="Stretch" 
             VerticalAlignment="Stretch">
                 <Viewbox Stretch="Uniform" Margin="15">
@@ -76,7 +76,7 @@
             <Border Grid.Column="2" Grid.Row="0" 
             Background="#1E293B" 
             CornerRadius="10" 
-            Margin="10" 
+            Margin="10,20,10,10"
             HorizontalAlignment="Stretch" 
             VerticalAlignment="Stretch">
                 <Viewbox Stretch="Uniform" Margin="15">
@@ -92,7 +92,7 @@
             <Border Grid.Column="3" Grid.Row="0" 
             Background="#1E293B" 
             CornerRadius="10" 
-            Margin="10" 
+            Margin="10,20,10,10" 
             HorizontalAlignment="Stretch" 
             VerticalAlignment="Stretch">
                 <Viewbox Stretch="Uniform" Margin="15">
@@ -107,7 +107,7 @@
             <Border Grid.Column="0" Grid.Row="1" 
             Background="#1E293B" 
             CornerRadius="10" 
-            Margin="10" 
+            Margin="10,20,10,10"
             HorizontalAlignment="Stretch" 
             VerticalAlignment="Stretch">
                 <Viewbox Stretch="Uniform" Margin="15">
@@ -122,7 +122,7 @@
             <Border Grid.Column="1" Grid.Row="1" 
             Background="#1E293B" 
             CornerRadius="10" 
-            Margin="10" 
+            Margin="10,20,10,10"
             HorizontalAlignment="Stretch" 
             VerticalAlignment="Stretch">
                 <Viewbox Stretch="Uniform" Margin="15">
@@ -137,7 +137,7 @@
             <Border Grid.Column="2" Grid.Row="1" 
             Background="#1E293B" 
             CornerRadius="10" 
-            Margin="10" 
+            Margin="10,20,10,10"
             HorizontalAlignment="Stretch" 
             VerticalAlignment="Stretch">
                 <Viewbox Stretch="Uniform" Margin="15">
@@ -152,7 +152,7 @@
             <Border Grid.Column="3" Grid.Row="1" 
             Background="#1E293B" 
             CornerRadius="10" 
-            Margin="10" 
+            Margin="10,20,10,10" 
             HorizontalAlignment="Stretch" 
             VerticalAlignment="Stretch">
                 <Viewbox Stretch="Uniform" Margin="15">
