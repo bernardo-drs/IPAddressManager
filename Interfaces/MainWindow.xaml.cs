@@ -53,6 +53,9 @@ namespace Interfaces
                 case "About":
                     page = new About();
                     break;
+                case "Outils":
+                    page = new Outils();
+                    break;
 
                 default:
                     break;

@@ -6,6 +6,8 @@
     <File Path="Interfaces/Accueil.xaml.cs" />
     <File Path="Interfaces/Calculateur.xaml" />
     <File Path="Interfaces/Calculateur.xaml.cs" />
+    <File Path="Interfaces/Outils.xaml" />
+    <File Path="Interfaces/Outils.xaml.cs" />
     <File Path="Interfaces/RFC.xaml" />
     <File Path="Interfaces/RFC.xaml.cs" />
   </Folder>
