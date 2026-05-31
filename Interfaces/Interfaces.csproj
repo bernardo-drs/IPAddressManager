@@ -9,9 +9,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\About.png" />
     <None Remove="Images\app_icon.png" />
+    <None Remove="Images\Calculateur %281%29.png" />
+    <None Remove="Images\calculer_icon.png" />
     <None Remove="Images\fast_icon.png" />
+    <None Remove="Images\FLSM.png" />
     <None Remove="Images\home_icon.png" />
+    <None Remove="Images\Outils.png" />
+    <None Remove="Images\RFC.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -19,9 +25,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\About.png" />
     <Resource Include="Images\app_icon.png" />
+    <Resource Include="Images\Calculateur (1).png" />
+    <Resource Include="Images\calculer_icon.png" />
     <Resource Include="Images\fast_icon.png" />
+    <Resource Include="Images\FLSM.png" />
     <Resource Include="Images\home_icon.png" />
+    <Resource Include="Images\Outils.png" />
+    <Resource Include="Images\RFC.png" />
   </ItemGroup>
 
 </Project>
