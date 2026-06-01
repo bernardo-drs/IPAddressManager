@@ -96,7 +96,6 @@ namespace Interfaces
         {
             try
             {
-                // 1. Validation des champs d'entrée principaux
                 if (!IPAddress.TryParse(TxtBaseIp.Text, out IPAddress baseIp) ||
                     !int.TryParse(TxtBaseMask.Text, out int baseMask) || baseMask < 0 || baseMask > 32)
                 {
@@ -104,7 +103,6 @@ namespace Interfaces
                     return;
                 }
 
-                // 2. Lecture des deux TextBox FLSM de ton interface
                 bool hasSubnetCount = int.TryParse(TxtFlsmSubnetCount.Text.Trim(), out int requiredSubnets) && requiredSubnets > 0;
                 bool hasHostSize = int.TryParse(TxtFlsmHostSize.Text.Trim(), out int requiredHosts) && requiredHosts > 0;
 
@@ -117,22 +115,18 @@ namespace Interfaces
                 int newCidr = baseMask;
                 int subnetsToDisplay = 1;
 
-                // 3. Logique mathématique combinée (Ex: 4 sous-réseaux de 10 machines)
                 if (hasHostSize)
                 {
-                    // Calcul du masque nécessaire pour héberger le nombre de machines (+2 pour Réseau et Broadcast)
                     int totalAddressesNeeded = requiredHosts + 2;
                     int bitsNeededForHosts = (int)Math.Ceiling(Math.Log(totalAddressesNeeded, 2));
-                    if (bitsNeededForHosts < 2) bitsNeededForHosts = 2; // Minimum /30
+                    if (bitsNeededForHosts < 2) bitsNeededForHosts = 2;
 
                     newCidr = 32 - bitsNeededForHosts;
 
-                    // Si le nombre de sous-réseaux est aussi spécifié, on utilise cette valeur exacte pour l'affichage
                     if (hasSubnetCount)
                     {
                         subnetsToDisplay = requiredSubnets;
 
-                        // Vérification de sécurité pour s'assurer que ça rentre dans le réseau de base
                         int maxPossibleSubnets = (int)Math.Pow(2, newCidr - baseMask);
                         if (requiredSubnets > maxPossibleSubnets)
                         {
@@ -142,13 +136,11 @@ namespace Interfaces
                     }
                     else
                     {
-                        // Si seule la taille est fournie, on génère automatiquement tous les sous-réseaux possibles
                         subnetsToDisplay = (int)Math.Pow(2, newCidr - baseMask);
                     }
                 }
                 else if (hasSubnetCount)
                 {
-                    // Si seul le nombre de sous-réseaux est fourni (ancienne logique binaire pure)
                     int bitsNeededForSubnets = (int)Math.Ceiling(Math.Log(requiredSubnets, 2));
                     newCidr = baseMask + bitsNeededForSubnets;
                     subnetsToDisplay = (int)Math.Pow(2, bitsNeededForSubnets);
@@ -160,13 +152,11 @@ namespace Interfaces
                     return;
                 }
 
-                // 4. Calcul et génération des plages réseau
                 List<VlsmFlsmResult> flsmResults = new List<VlsmFlsmResult>();
                 uint currentIpBytes = IpToUint(baseIp);
                 int blockSize = (int)Math.Pow(2, 32 - newCidr);
                 int realHostsPerSubnet = blockSize - 2 < 0 ? 0 : blockSize - 2;
 
-                // On limite l'affichage à 256 lignes max pour éviter le gel de l'application
                 int displayLimit = Math.Min(subnetsToDisplay, 256);
 
                 for (int i = 0; i < displayLimit; i++)
@@ -189,10 +179,8 @@ namespace Interfaces
                     });
                 }
 
-                // Nettoyage du tableau VLSM pour éviter les conflits visuels
                 if (GridVlsmResults != null) GridVlsmResults.ItemsSource = null;
 
-                // Envoi des résultats au DataGrid
                 GridFlsmResults.ItemsSource = flsmResults;
             }
             catch (Exception ex)
