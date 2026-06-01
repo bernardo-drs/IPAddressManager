@@ -43,6 +43,6 @@ namespace Systeme
         public string SubnetMask { get; set; }
         public string Cidr { get; set; }
         public string BroadcastAddress { get; set; }
-        public string IpRange { get; set; } // Plage Utilisable
+        public string IpRange { get; set; }
     }
 }
