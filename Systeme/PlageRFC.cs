@@ -33,4 +33,16 @@ namespace Systeme
         protected void OnPropertyChanged(string propertyName)
             => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
+
+    public class VlsmFlsmResult
+    {
+        public string Name { get; set; }
+        public int RequestedHosts { get; set; }
+        public int RealHosts { get; set; }
+        public string NetworkAddress { get; set; }
+        public string SubnetMask { get; set; }
+        public string Cidr { get; set; }
+        public string BroadcastAddress { get; set; }
+        public string IpRange { get; set; } // Plage Utilisable
+    }
 }

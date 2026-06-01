@@ -28,5 +28,171 @@
             </TextBlock>
         </Viewbox>
         <Rectangle Fill="#808080" Grid.Column="1" Grid.Row="2"></Rectangle>
+
+        <Grid Grid.Column="1" Grid.Row="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70*"/>
+                <RowDefinition Height="250*"/>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="248*"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,5,0,0">
+                <Viewbox Stretch="Uniform" VerticalAlignment="Center">
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel Margin="15,0,20,0">
+                            <TextBlock Text="Adresse Net" FontSize="20" Foreground="White" FontFamily="Segoe UI" Margin="0,0,0,5"/>
+                            <TextBox x:Name="TxtBaseIp" Width="180" Height="30" Background="#1E293B" Foreground="#F8FAFC" BorderBrush="#475569" Padding="5" VerticalContentAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel>
+                            <TextBlock Text="Masque CIDR " FontSize="20" Foreground="White" FontFamily="Segoe UI" Margin="0,0,0,5"/>
+                            <TextBox x:Name="TxtBaseMask" Width="80" Height="30" Background="#1E293B" Foreground="#F8FAFC" BorderBrush="#475569" Padding="5" VerticalContentAlignment="Center" HorizontalAlignment="Left"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Viewbox>
+            </StackPanel>
+
+            <Border Grid.Row="1" Background="#111827" CornerRadius="8" Padding="15">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30*"/>
+                        <RowDefinition Height="65*"/>
+                        <RowDefinition Height="155*"/>
+                    </Grid.RowDefinitions>
+
+                    <Viewbox Grid.Row="0" Stretch="Uniform" HorizontalAlignment="Left">
+                        <TextBlock Text="Calcul VLSM (Longueur Variable)" FontSize="20" FontWeight="SemiBold" Foreground="#F8FAFC" FontFamily="Segoe UI"/>
+                    </Viewbox>
+
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="400*"/>
+                            <ColumnDefinition Width="90*"/>
+                            <ColumnDefinition Width="400*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Viewbox Grid.Column="0" Stretch="Uniform" HorizontalAlignment="Left">
+                            <StackPanel Width="400" Margin="0,0,10,0">
+                                <TextBlock Text="Tailles des sous-réseaux (séparées par des virgules)" FontSize="12" Foreground="#94A3B8" FontFamily="Segoe UI" Margin="0,0,0,5"/>
+                                <TextBox x:Name="TxtVlsmSizes" Height="30" Background="#1E293B" Foreground="#F8FAFC" BorderBrush="#475569" Padding="5" VerticalContentAlignment="Center"/>
+                            </StackPanel>
+                        </Viewbox>
+
+                        <Viewbox Grid.Column="1" Stretch="Uniform" HorizontalAlignment="Left">
+                            <Button Margin="0,19,0,0" Content="Calculer" Click="BtnCalculateVlsm_Click" Width="90" Height="30" Background="#38BDF8" Foreground="#0F172A" FontWeight="SemiBold" BorderThickness="0" Cursor="Hand"/>
+                        </Viewbox>
+                    </Grid>
+
+                    <DataGrid Grid.Row="2" x:Name="GridVlsmResults" AutoGenerateColumns="False" IsReadOnly="True" HeadersVisibility="Column" Background="#1E293B" RowBackground="#1E293B" AlternatingRowBackground="#334155" Foreground="#F8FAFC" BorderBrush="#475569" GridLinesVisibility="Horizontal" HorizontalGridLinesBrush="#475569" FontSize="12">
+                        <DataGrid.Resources>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="Background" Value="#334155"/>
+                                <Setter Property="Foreground" Value="#F8FAFC"/>
+                                <Setter Property="Padding" Value="5,6,5,6"/>
+                                <Setter Property="FontWeight" Value="SemiBold"/>
+                                <Setter Property="BorderBrush" Value="#475569"/>
+                                <Setter Property="BorderThickness" Value="0,0,1,1"/>
+                                <Setter Property="VerticalContentAlignment" Value="Center"/>
+                            </Style>
+                            <Style TargetType="DataGridCell">
+                                <Style.Triggers>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter Property="Background" Value="#475569"/>
+                                        <Setter Property="Foreground" Value="#38BDF8"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </DataGrid.Resources>
+
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Sous-réseau" Binding="{Binding Name}" Width="1*"/>
+                            <DataGridTextColumn Header="Hôtes requis" Binding="{Binding RequestedHosts}" Width="1*"/>
+                            <DataGridTextColumn Header="Hôtes réels" Binding="{Binding RealHosts}" Width="1*"/>
+                            <DataGridTextColumn Header="Adresse réseau" Binding="{Binding NetworkAddress}" Width="1.25*"/>
+                            <DataGridTextColumn Header="Masque de sous-réseau" Binding="{Binding SubnetMask}" Width="1.8*"/>
+                            <DataGridTextColumn Header="CIDR" Binding="{Binding Cidr}" Width="0.6*"/>
+                            <DataGridTextColumn Header="Diffusion" Binding="{Binding BroadcastAddress}" Width="1.25*"/>
+                            <DataGridTextColumn Header="Plage utilisable" Binding="{Binding IpRange}" Width="2.2*"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </Border>
+
+            <Rectangle Height="2" Fill="#808080" HorizontalAlignment="Stretch" Grid.Row="2"/>
+
+
+            <Border Grid.Row="4" Background="#111827" CornerRadius="8" Padding="15">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30*"/>
+                        <RowDefinition Height="65*"/>
+                        <RowDefinition Height="153*"/>
+                    </Grid.RowDefinitions>
+
+                    <Viewbox Grid.Row="0" Stretch="Uniform" HorizontalAlignment="Left">
+                        <TextBlock Text="Calcul FLSM (Longueur Fixe)" FontSize="20" FontWeight="SemiBold" Foreground="#F8FAFC" FontFamily="Segoe UI"/>
+                    </Viewbox>
+
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="400*"/>
+                            <ColumnDefinition Width="400*"/>
+                            <ColumnDefinition Width="90*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Viewbox Grid.Column="0" Stretch="Uniform" HorizontalAlignment="Left">
+                            <StackPanel Width="400" Margin="0,0,10,0">
+                                <TextBlock Text="Nombre de sous-réseaux" FontSize="12" Foreground="#94A3B8" FontFamily="Segoe UI" Margin="0,0,0,5"/>
+                                <TextBox x:Name="TxtFlsmSubnetCount" Height="30" Background="#1E293B" Foreground="#F8FAFC" BorderBrush="#475569" Padding="5" VerticalContentAlignment="Center"/>
+                            </StackPanel>
+                        </Viewbox>
+
+                        <Viewbox Grid.Column="1" Stretch="Uniform" HorizontalAlignment="Left">
+                            <StackPanel Width="400" Margin="0,0,10,0">
+                                <TextBlock Text="Tailles des sous-réseaux (nombre de machines par réseaux)" FontSize="12" Foreground="#94A3B8" FontFamily="Segoe UI" Margin="0,0,0,5"/>
+                                <TextBox x:Name="TxtFlsmHostSize" Height="30" Background="#1E293B" Foreground="#F8FAFC" BorderBrush="#475569" Padding="5" VerticalContentAlignment="Center"/>
+                            </StackPanel>
+                        </Viewbox>
+
+                        <Viewbox Grid.Column="2" Stretch="Uniform" HorizontalAlignment="Left">
+                            <Button Margin="0,19,0,0" Content="Calculer" Click="BtnCalculateFlsm_Click" Width="90" Height="30" Background="#38BDF8" Foreground="#0F172A" FontWeight="SemiBold" BorderThickness="0" Cursor="Hand"/>
+                        </Viewbox>
+                    </Grid>
+
+                    <DataGrid Grid.Row="2" x:Name="GridFlsmResults" AutoGenerateColumns="False" IsReadOnly="True" HeadersVisibility="Column" Background="#1E293B" RowBackground="#1E293B" AlternatingRowBackground="#334155" Foreground="#F8FAFC" BorderBrush="#475569" GridLinesVisibility="Horizontal" HorizontalGridLinesBrush="#475569" FontSize="12">
+                        <DataGrid.Resources>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="Background" Value="#334155"/>
+                                <Setter Property="Foreground" Value="#F8FAFC"/>
+                                <Setter Property="Padding" Value="5,6,5,6"/>
+                                <Setter Property="FontWeight" Value="SemiBold"/>
+                                <Setter Property="BorderBrush" Value="#475569"/>
+                                <Setter Property="BorderThickness" Value="0,0,1,1"/>
+                                <Setter Property="VerticalContentAlignment" Value="Center"/>
+                            </Style>
+                            <Style TargetType="DataGridCell">
+                                <Style.Triggers>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter Property="Background" Value="#475569"/>
+                                        <Setter Property="Foreground" Value="#38BDF8"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </DataGrid.Resources>
+
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Sous-réseau" Binding="{Binding Name}" Width="1*"/>
+                            <DataGridTextColumn Header="Hôtes requis" Binding="{Binding RequestedHosts}" Width="1*"/>
+                            <DataGridTextColumn Header="Hôtes réels" Binding="{Binding RealHosts}" Width="1*"/>
+                            <DataGridTextColumn Header="Adresse réseau" Binding="{Binding NetworkAddress}" Width="1.25*"/>
+                            <DataGridTextColumn Header="Masque de sous-réseau" Binding="{Binding SubnetMask}" Width="1.8*"/>
+                            <DataGridTextColumn Header="CIDR" Binding="{Binding Cidr}" Width="0.6*"/>
+                            <DataGridTextColumn Header="Diffusion" Binding="{Binding BroadcastAddress}" Width="1.25*"/>
+                            <DataGridTextColumn Header="Plage utilisable" Binding="{Binding IpRange}" Width="2.2*"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </Border>
+        </Grid>
     </Grid>
 </Page>
