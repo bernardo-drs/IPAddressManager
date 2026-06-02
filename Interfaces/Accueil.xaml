@@ -84,7 +84,7 @@ Calcul Instantané des masques
                     <Border Background="#1E293B" CornerRadius="20" Grid.Column="1" Margin="10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                         <StackPanel >
                             <Viewbox MaxWidth="100" MaxHeight="200" Margin="20" HorizontalAlignment="Stretch">
-                                <Image Source="/Images/fast_icon.png" ></Image>
+                                <Image Source="/Images/Cible.png" ></Image>
                             </Viewbox>
                             <Viewbox MaxHeight="50" HorizontalAlignment="Stretch">
                                 <TextBlock Foreground="#F8FAFC">
@@ -101,7 +101,7 @@ Résultats fiables et détaillés
                     <Border Background="#1E293B" CornerRadius="20" Grid.Column="2" Margin="10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                         <StackPanel >
                             <Viewbox MaxWidth="100" MaxHeight="200" Margin="20" HorizontalAlignment="Stretch">
-                                <Image Source="/Images/fast_icon.png" ></Image>
+                                <Image Source="/Images/boussole (1).png" ></Image>
                             </Viewbox>
                             <Viewbox MaxHeight="50" HorizontalAlignment="Stretch">
                                 <TextBlock Foreground="#F8FAFC">
@@ -117,8 +117,8 @@ Interface simple et claire
                     </Border>
                     <Border Background="#1E293B" CornerRadius="20" Grid.Column="3" Margin="10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                         <StackPanel >
-                            <Viewbox MaxWidth="100" MaxHeight="200" Margin="20" HorizontalAlignment="Stretch">
-                                <Image Source="/Images/fast_icon.png" ></Image>
+                            <Viewbox MaxWidth="85" MaxHeight="200" Margin="20" HorizontalAlignment="Stretch">
+                                <Image Source="/Images/Complet.png" ></Image>
                             </Viewbox>
                             <Viewbox MaxHeight="50" HorizontalAlignment="Stretch">
                                 <TextBlock Foreground="#F8FAFC">

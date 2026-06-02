@@ -11,8 +11,11 @@
   <ItemGroup>
     <None Remove="Images\About.png" />
     <None Remove="Images\app_icon.png" />
+    <None Remove="Images\boussole %281%29.png" />
     <None Remove="Images\Calculateur %281%29.png" />
     <None Remove="Images\calculer_icon.png" />
+    <None Remove="Images\Cible.png" />
+    <None Remove="Images\Complet.png" />
     <None Remove="Images\fast_icon.png" />
     <None Remove="Images\FLSM.png" />
     <None Remove="Images\home_icon.png" />
@@ -27,8 +30,11 @@
   <ItemGroup>
     <Resource Include="Images\About.png" />
     <Resource Include="Images\app_icon.png" />
+    <Resource Include="Images\boussole (1).png" />
     <Resource Include="Images\Calculateur (1).png" />
     <Resource Include="Images\calculer_icon.png" />
+    <Resource Include="Images\Cible.png" />
+    <Resource Include="Images\Complet.png" />
     <Resource Include="Images\fast_icon.png" />
     <Resource Include="Images\FLSM.png" />
     <Resource Include="Images\home_icon.png" />
