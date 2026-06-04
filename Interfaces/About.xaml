@@ -59,7 +59,7 @@
                            Foreground="#CBD5E1" FontSize="20" LineHeight="20" TextWrapping="Wrap" Margin="0,0,0,20" FontFamily="Segoe UI" TextAlignment="Justify"/>
 
                     <TextBlock Text="Sources utilisées" Foreground="#F8FAFC" FontSize="25" FontWeight="Bold" Margin="0,0,0,5" FontFamily="Segoe UI"/>
-                    <TextBlock Text="Données récupérées auprès de l'IETF (Registre des adresses IPv4 à usage spécial — RFC 6890)." TextWrapping="Wrap" TextAlignment="Justify" Foreground="#CBD5E1" FontSize="20" Margin="0,0,0,20" FontFamily="Segoe UI"/>
+                    <TextBlock Text="Données récupérées auprès de l'IETF (Registre des adresses IPv4 à usage spécial — RFC 5735)." TextWrapping="Wrap" TextAlignment="Justify" Foreground="#CBD5E1" FontSize="20" Margin="0,0,0,20" FontFamily="Segoe UI"/>
 
                     <TextBlock Text="Auteurs de la création de l'application" Foreground="#F8FAFC" FontSize="25" FontWeight="Bold" Margin="0,0,0,10" FontFamily="Segoe UI"/>
 

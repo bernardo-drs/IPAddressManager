@@ -26,13 +26,13 @@
 
         <Viewbox Stretch="Uniform" Grid.Column="1" Grid.Row="1" Margin="0,0,0,0" HorizontalAlignment="Left">
             <TextBlock x:Name="Title" Foreground="#F8FAFC">
-            Plages RFC  6890
+            Plages RFC  5735
             </TextBlock>
         </Viewbox>
         <Rectangle Fill="#808080" Grid.Column="1" Grid.Row="2"></Rectangle>
         <Viewbox MaxHeight="30" Stretch="Uniform" Grid.Column="1" Grid.Row="3" Margin="0,0,0,0" HorizontalAlignment="Left">
             <TextBlock Foreground="White">
-            Espaces d'adressage IPv4 réservés (RFC 6890)
+            Espaces d'adressage IPv4 réservés (RFC 5735)
             </TextBlock>
         </Viewbox>
 
@@ -138,7 +138,7 @@
             </DataGrid.Columns>
         </DataGrid>
         <TextBlock Grid.Column="1" Grid.Row="5"
-           Text="Source officielle : RFC 6890 - Special-Purpose IP Address Registries"
+           Text="Source officielle : RFC 5735 - Special Use IPv4 Addresses"
            Foreground="#64748B" 
            FontSize="20" 
            FontWeight="Light"
