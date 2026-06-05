@@ -51,7 +51,7 @@
                     <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
                         <TextBlock Text="1010&#x0a;0101" Foreground="#38BDF8" FontSize="22" FontWeight="Bold" LineHeight="20" HorizontalAlignment="Center" Margin="0,0,0,5" FontFamily="Segoe UI"/>
                         <TextBlock Text="Conversion" Foreground="#F8FAFC" FontSize="14" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,5" FontFamily="Segoe UI"/>
-                        <TextBlock Text="Convertir IP, binaire,&#x0a;hexadécimal" Foreground="#94A3B8" FontSize="11" TextAlignment="Center" TextWrapping="Wrap" FontFamily="Segoe UI" Margin="0,0,0,5"/>
+                        <TextBlock Text="Convertir IP, binaire" Foreground="#94A3B8" FontSize="11" TextAlignment="Center" TextWrapping="Wrap" FontFamily="Segoe UI" Margin="0,0,0,5"/>
                     </StackPanel>
                 </Viewbox>
             </Border>
@@ -83,7 +83,7 @@
                     <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
                         <TextBlock Text="✓" Foreground="#38BDF8" FontSize="32" HorizontalAlignment="Center" Margin="0,0,0,15" FontFamily="Segoe UI Symbol"/>
                         <TextBlock Text="Tester une IP" Foreground="#F8FAFC" FontSize="14" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,5" FontFamily="Segoe UI"/>
-                        <TextBlock Text="Vérifier si une IP est&#x0a; valide et son type" Foreground="#94A3B8" FontSize="11" TextAlignment="Center" TextWrapping="Wrap" FontFamily="Segoe UI"/>
+                        <TextBlock Text="Vérifier si une IP est&#x0a; valide" Foreground="#94A3B8" FontSize="11" TextAlignment="Center" TextWrapping="Wrap" FontFamily="Segoe UI"/>
                     </StackPanel>
                 </Viewbox>
             </Border>
