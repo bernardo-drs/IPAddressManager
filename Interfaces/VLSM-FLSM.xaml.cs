@@ -47,7 +47,9 @@ namespace Interfaces
                 var sortedHosts = requestedHosts.OrderByDescending(h => h).ToList();
                 List<VlsmFlsmResult> vlsmResults = new List<VlsmFlsmResult>();
 
-                uint currentIpBytes = IpToUint(baseIp);
+                uint mainMaskBytes = uint.MaxValue << (32 - baseMask);
+                uint currentIpBytes = IpToUint(baseIp) & mainMaskBytes;
+
                 int subnetCounter = 1;
 
                 foreach (int hosts in sortedHosts)
@@ -61,6 +63,18 @@ namespace Interfaces
 
                     int cidr = 32 - power;
                     int realHosts = (int)Math.Pow(2, power) - 2;
+
+                    uint subnetMaskBytes = uint.MaxValue << (32 - cidr);
+                    if ((currentIpBytes & ~subnetMaskBytes) != 0)
+                    {
+                        currentIpBytes = (currentIpBytes & subnetMaskBytes) + (uint)Math.Pow(2, power);
+                    }
+
+                    if ((currentIpBytes & mainMaskBytes) != (IpToUint(baseIp) & mainMaskBytes))
+                    {
+                        MessageBox.Show("Espace d'adressage insuffisant dans le réseau principal pour contenir tous les sous-réseaux demandés.", "Erreur de capacité", MessageBoxButton.OK, MessageBoxImage.Error);
+                        return;
+                    }
 
                     uint networkAddr = currentIpBytes;
                     uint firstIp = networkAddr + 1;
@@ -88,7 +102,7 @@ namespace Interfaces
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Erreur lors du calcul VLSM : {ex.Message}", "Erreur de saisie", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show($"Erreur lors du calcul VLSM : {ex.Message}", "Erreur", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
@@ -152,8 +166,10 @@ namespace Interfaces
                     return;
                 }
 
+                uint mainMaskBytes = uint.MaxValue << (32 - baseMask);
+                uint currentIpBytes = IpToUint(baseIp) & mainMaskBytes;
+
                 List<VlsmFlsmResult> flsmResults = new List<VlsmFlsmResult>();
-                uint currentIpBytes = IpToUint(baseIp);
                 int blockSize = (int)Math.Pow(2, 32 - newCidr);
                 int realHostsPerSubnet = blockSize - 2 < 0 ? 0 : blockSize - 2;
 
@@ -162,6 +178,13 @@ namespace Interfaces
                 for (int i = 0; i < displayLimit; i++)
                 {
                     uint networkAddr = currentIpBytes + (uint)(i * blockSize);
+
+                    if ((networkAddr & mainMaskBytes) != (IpToUint(baseIp) & mainMaskBytes))
+                    {
+                        MessageBox.Show("L'indexation des sous-réseaux FLSM dépasse la capacité du réseau principal.", "Limite atteinte", MessageBoxButton.OK, MessageBoxImage.Warning);
+                        break;
+                    }
+
                     uint firstIp = networkAddr + 1;
                     uint broadcastAddr = networkAddr + (uint)blockSize - 1;
                     uint lastIp = broadcastAddr - 1;
