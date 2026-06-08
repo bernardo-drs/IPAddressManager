@@ -168,7 +168,7 @@ namespace Interfaces
 
                     flsmResults.Add(new VlsmFlsmResult
                     {
-                        Name = $"Subnet {i + 1}",
+                        Name = $"Sous-réseau {i + 1}",
                         RequestedHosts = hasHostSize ? requiredHosts : realHostsPerSubnet,
                         RealHosts = realHostsPerSubnet,
                         NetworkAddress = UintToIp(networkAddr).ToString(),
